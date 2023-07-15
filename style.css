@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(235, 18%, 26%);
+    font-family: 'Roboto', sans-serif;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+}
+
+.container {
+    width: 60%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 5vh 30px;
+} 
+
+.information-holder {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: hsl(234, 29%, 20%);
+}
+
+.information-holder ul {
+    list-style: none;
+}
+
+.information-holder ul li {
+    margin-bottom: 8px;
+}
+
+.information-holder ul li img {
+    width: 12px;
+}
+
+.information-holder form {
+    width: 100%;
+}
+
+.information-holder form div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.information-holder form div p {
+    color: hsl(4, 100%, 67%);
+}
+
+.information-holder form input {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+}
+
+input[type=email] {
+    border: 2px solid hsl(231, 7%, 60%);
+    padding-left: 10px;
+    margin: 5px 0 15px 0;
+    cursor: pointer;
+}
+
+input[type=submit] {
+    background-color: hsl(234, 29%, 20%);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    cursor:not-allowed;
+}
+
+.submit-enabled:hover {
+    background: linear-gradient(45deg, hsl(4, 91%, 59%), hsl(4, 100%, 67%));
+    cursor: pointer;
+}
+
+.image-holder {
+    width: 40%;
+    height: 100%;
+    background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.success {
+    width: 40%;
+    min-height: 50vh;
+    background-color: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px 5%;
+    color: hsl(234, 29%, 20%);
+}
+
+.success img {
+    width: 50px;
+}
+
+.success p span {
+    font-weight: bold;
+    color: hsl(234, 29%, 20%);
+}
+
+.success button {
+    height: 40px;
+    background-color: hsl(234, 29%, 20%);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.success button:hover {
+    background: linear-gradient(45deg, hsl(4, 91%, 59%), hsl(4, 100%, 67%));
+}
+
+.hide {
+    display: none;
+}
+
+.input-error:invalid {
+    background-color: hsla(4, 100%, 67%, 0.2);
+    color: hsl(4, 100%, 67%);
+    border: 2px solid hsl(4, 100%, 67%);
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: #fff;
+    }
+    
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        border-radius: 0;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .information-holder {
+        width: 100%;
+        padding: 10px 10%;
+    }
+
+    .information-holder form input {
+        height: 50px;
+    }
+
+    .image-holder {
+        height: 45vh;
+        width: 100%;
+        background-position: bottom;
+    }
+}
